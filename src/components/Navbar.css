@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Arrow';
+    src: url("../assets/arrowFont.ttf");
+}
+
 .navbar{
     width: 100%;
     display: flex;
@@ -5,7 +10,9 @@
     justify-content: space-between;
     background: #fff;
     padding: 15px 7%;
-
+    position: fixed;
+    z-index: 2;
+    font-family: Arrow;
 }
 
 .logo{

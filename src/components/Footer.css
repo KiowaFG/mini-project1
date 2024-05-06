@@ -1,12 +1,10 @@
 @font-face {
     font-family: 'Arrow';
-    /* Name your font family */
     src: url("../assets/arrowFont.ttf");
-    /* Locate the .ttf file within your directory*/
 }
 
 .footer-container {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     background-color: #08080c;
     width: 100vw;
     height: 175px;
@@ -113,6 +111,7 @@
 
 .footer-paragraph.left {
     padding-left: 20px;
+    cursor: pointer;
 }
 
 .footerLogo-container{
