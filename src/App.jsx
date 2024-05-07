@@ -1,22 +1,22 @@
 import { useState } from 'react'
 import { Route, Routes } from "react-router-dom";
-import './App.css'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Section from './components/Section'
-import apartment_data from "./data/project_data.json";
-import Favorites from './components/Favorites';
+import ApartmentListing from './pages/ApartmentListing';
+import ApartmentFavorites from './pages/ApartmentFavorites';
+import ApartmentDetails from './pages/ApartmentDetails';
+import './App.css'
 
 function App() {
-  const [dataArray, setDataArray] = useState(apartment_data.results)
   const [favArray, setFavArray] = useState([]);
-  const [searchArray, setSearchArray] = useState([]);
+  // const [searchArray, setSearchArray] = useState([]);
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/properties" element={<Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} />}></Route>
-        <Route path="/favorites" element={<Favorites favArray={favArray} setFavArray={setFavArray} />}></Route>
+        <Route path="/properties" element={<ApartmentListing favArray={favArray} setFavArray={setFavArray} />}></Route>
+        <Route path="/favorites" element={<ApartmentFavorites favArray={favArray} setFavArray={setFavArray} />}></Route>
+        <Route path="/details/:apartmentId" element={<ApartmentDetails />}></Route>
       </Routes>
       <Footer />
     </>
