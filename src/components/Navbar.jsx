@@ -1,10 +1,7 @@
-import React from 'react'
-import "./Navbar.css"
-import logo from "../assets/images/logoApartment.png"
-import sun from "../assets/images/icons8-sol-50.png"
-import moon from "../assets/images/icons8-luna-creciente-50.png"
-import search from "../assets/images/icons8-búsqueda-50.png"
 import { Link } from 'react-router-dom'
+import React from 'react'
+import logo from "../assets/images/logoApartment.png"
+import "./Navbar.css"
 
 const Navbar = () => {
     return (
@@ -27,8 +24,6 @@ const Navbar = () => {
                 <li>Add apartment</li>
                 <li>About</li>
             </ul>
-            <img className='toggle-icon' src={moon} alt="" />
-
         </div>
     )
 }
