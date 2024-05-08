@@ -33,6 +33,8 @@ ul li{
     cursor: pointer;
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .toggle-icon{
@@ -71,7 +73,8 @@ ul li{
 }
 
 ul li:hover{
-    background-color: rgb(220, 220, 220);
+    background-color: darkgrey;
+    transition: 400ms;
 }
 
 .dropdownContent{
@@ -81,7 +84,7 @@ ul li:hover{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  top: 110%; 
+  top: 100%; 
   left: 50% ;
   transform: translateX(-50%);
   

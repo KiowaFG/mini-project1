@@ -9,10 +9,14 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='navbar'>
+        <Link to={"/"}>
       <img className='logo' src={logo} alt="logo-img" />
+      </Link>
       <ul>
+        <Link to={"/"}>
         <li>Home </li>
-        <li className='dropdown'><Link to="/properties">Properties</Link>
+        <Link to="/properties">
+        <li className='dropdown'>Properties
           <div className='dropdownContent'>
             <a href="#">Studios</a>
             <a href="#">Apartments</a>
@@ -20,7 +24,8 @@ const Navbar = () => {
             <a href="#">Vilas</a>
           </div>
         </li>
-        <li><Link to="/favorites">Favorites</Link></li>
+        </Link>
+        <Link to="/favorites"><li>Favorites</li></Link>
         <li>About</li>
       </ul>
       <div className='searchbar'>
