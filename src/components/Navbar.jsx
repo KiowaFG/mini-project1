@@ -13,8 +13,8 @@ const Navbar = () => {
       <img className='logo' src={logo} alt="logo-img" />
       </Link>
       <ul>
-        <Link to={"/"}>
-        <li>Home </li>
+        <Link to="/">
+        <li>Home </li></Link>
         <Link to="/properties">
         <li className='dropdown'>Properties
           <div className='dropdownContent'>

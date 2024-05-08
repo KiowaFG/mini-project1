@@ -5,10 +5,7 @@ import Navbar from './components/Navbar'
 import ApartmentListing from './pages/ApartmentListing';
 import ApartmentFavorites from './pages/ApartmentFavorites';
 import ApartmentDetails from './pages/ApartmentDetails';
-import Section from './components/Section'
 import HomePage from './components/HomePage'
-import { Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
 import './App.css'
 
 function App() {
