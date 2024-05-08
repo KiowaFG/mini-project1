@@ -6,14 +6,13 @@ import "./ApartmentListing.css"
 
 
 
-const ApartmentListing = ({ favArray, setFavArray }) => {
+const ApartmentListing = ({ favArray, setFavArray, inputData, setInputData, dummyTrigger }) => {
     const [dataArray, setDataArray] = useState(apartment_data.results);
-    const [inputData, setInputData] = useState("");
-    
+
     return (
         <div className='upper-container'>
-            <SearchBar dataArray={dataArray} setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} />
-            <Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} />
+            <SearchBar dataArray={dataArray} setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} dummyTrigger={dummyTrigger}/>
+            <Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} inputData={inputData} />
         </div>
     )
 };

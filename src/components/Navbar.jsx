@@ -27,11 +27,6 @@ const Navbar = () => {
                 <li>Add apartment</li>
                 <li>About</li>
             </ul>
-            {/* <div className='searchbar'>
-        <input type="text" placeholder='Search' />
-        <img src={search} alt="" />
-      </div> */}
-
             <img className='toggle-icon' src={moon} alt="" />
 
         </div>

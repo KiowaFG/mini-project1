@@ -3,23 +3,24 @@ import searchBar from "../assets/images/search.png"
 import apartment_data from "../data/project_data.json";
 import { useEffect } from "react";
 
-const SearchBar = ({ setDataArray, inputData, setInputData }) => {
-    // Question for Marcel - why need to add useEffect to sort out delay?
-    // improve searchbar functionality
-    useEffect(() => {
-        setDataArray(
-            apartment_data.results.filter(element => element.city.toLowerCase().includes(inputData.toLowerCase()) ||
-                element.country.toLowerCase().includes(inputData.toLowerCase()))
-        )
-    }, [inputData]);
+const SearchBar = ({ setDataArray, inputData, setInputData, dummyTrigger }) => {
     const updateArray = (e) => {
         setInputData(e.target.value);
     };
 
+    const triggerSetArray = () => {
+        setDataArray(
+            apartment_data.results.filter(element => element.city.toLowerCase().includes(inputData.toLowerCase()) ||
+                element.country.toLowerCase().includes(inputData.toLowerCase()))
+        )
+    };
+
+    useEffect(() => { triggerSetArray() }, [dummyTrigger])
+
     return (
         <div className="search-box">
             <button className="btn-search"><img className="search-image" src={searchBar} alt="" /></button>
-            <input onChange={updateArray} type="text" className="input-search" placeholder="Type to Search..."></input>
+            <input onKeyUp={(e) => e.key === "Enter" && triggerSetArray()} onChange={updateArray} type="text" className="input-search" placeholder="Type to Search..." value={inputData}></input>
         </div>
     )
 }

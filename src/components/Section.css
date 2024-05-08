@@ -72,6 +72,16 @@
    
 }
 
+.major-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0px 100px 20px 100px;
+    padding-top: 40px;
+    min-height: 85vh;
+}
+
 .fav-icon {
     position: absolute;
     width: 25px;
