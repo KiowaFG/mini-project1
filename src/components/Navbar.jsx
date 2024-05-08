@@ -9,14 +9,17 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <Link to={"/"}>
-      <img className='logo' src={logo} alt="logo-img" />
+      <Link to={"/"}>
+        <img className='logo' src={logo} alt="logo-img" />
       </Link>
       <ul>
         <Link to="/">
-        <li>Home </li></Link>
-        <Link to="/properties">
-        <li className='dropdown'>Properties
+          <li>Home </li>
+        </Link>
+        <li className='dropdown'>
+          <Link to="/properties">
+            Properties
+          </Link>
           <div className='dropdownContent'>
             <a href="#">Studios</a>
             <a href="#">Apartments</a>
@@ -24,7 +27,6 @@ const Navbar = () => {
             <a href="#">Vilas</a>
           </div>
         </li>
-        </Link>
         <Link to="/favorites"><li>Favorites</li></Link>
         <li>About</li>
       </ul>
