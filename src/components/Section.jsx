@@ -25,7 +25,7 @@ const Section = ({ dataArray, favArray, setFavArray }) => {
                     // Code to refacor ends here
                     return (
                         <div key={apartment.id} className="main-container">
-                            <img onClick={() => setFavStateFunction(apartment.id)} className="fav-icon" src={heartIcon} alt="test" />
+                            <img onClick={() => setFavStateFunction(apartment.id)} className="fav-icon" src= {heartIcon} alt="test" />  {/*{favState ? heartFilledIcon : heartIcon} alt="test" />  */}
                             <Link key={apartment.id} to={`/details/${apartment.id}`}>
                                 <img className="image-portfolio" src={apartment.picture_url.url} alt="test" />
                                 <div className="lower-container">
