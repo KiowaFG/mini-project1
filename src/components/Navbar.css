@@ -28,6 +28,9 @@ ul li{
     cursor: pointer;
     padding: 20px;
     border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    
 }
 
 .toggle-icon{
