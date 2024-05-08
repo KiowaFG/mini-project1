@@ -1,0 +1,71 @@
+.backgroundImage{
+background-image: url("../assets/images/madridView.webp");
+width: 100vw;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-color: rgb(154, 154, 154);
+background-blend-mode: multiply;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+
+.backgroundImage .Title{
+    height: 10vh;
+}
+
+.Title{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mainTitle{
+    font-size: 50px;
+}
+
+.searchBox input{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:white;
+    border-radius: 50px;
+    border-top: none;
+    border-bottom: none;
+    width: 300px;
+    
+}
+
+.searchBox input:focus{
+    outline: none;
+}
+.searchBox img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.searchbox input{
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    max-width: 200px;
+
+}
+
+.perks{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 20px;
+    width: 300px;
+
+}
