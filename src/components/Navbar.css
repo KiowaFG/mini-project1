@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Arrow';
+    src: url("../assets/arrowFont.ttf");
+}
+
 .navbar{
     width: 100%;
     display: flex;
@@ -7,7 +12,7 @@
     padding: 15px 7%;
     position: fixed;
     z-index: 2;
-
+    font-family: Arrow;
 }
 
 .logo{
@@ -26,11 +31,10 @@ ul li{
     margin: 10px 20px;
     font-size: 18px;
     cursor: pointer;
-    padding: 20px;
-    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
     text-decoration: none;
     color: black;
-    
 }
 
 .toggle-icon{
@@ -101,4 +105,9 @@ ul li:hover{
 
 .dropdown{
     position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

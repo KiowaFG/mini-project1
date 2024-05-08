@@ -4,7 +4,7 @@ import logo from "../assets/images/logoApartment.png"
 import sun from "../assets/images/icons8-sol-50.png"
 import moon from "../assets/images/icons8-luna-creciente-50.png"
 import search from "../assets/images/icons8-búsqueda-50.png"
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -15,10 +15,8 @@ const Navbar = () => {
       <ul>
         <Link to={"/"}>
         <li>Home </li>
-        </Link>
-        <Link to={"/section"}>
+        <Link to="/properties">
         <li className='dropdown'>Properties
-        
           <div className='dropdownContent'>
             <a href="#">Studios</a>
             <a href="#">Apartments</a>
@@ -27,8 +25,7 @@ const Navbar = () => {
           </div>
         </li>
         </Link>
-
-        <li>Favourites</li>
+        <Link to="/favorites"><li>Favorites</li></Link>
         <li>About</li>
       </ul>
       <div className='searchbar'>

@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Arrow';
-    /* Name your font family */
     src: url("../assets/arrowFont.ttf");
-    /* Locate the .ttf file within your directory*/
 }
 
 .footer-container {
@@ -83,6 +81,7 @@
     height: 50px;
     font-size: 50px;
     color: #585858;
+    cursor: default;
 }
 
 .footerRight-container {
@@ -112,6 +111,7 @@
 
 .footer-paragraph.left {
     padding-left: 20px;
+    cursor: pointer;
 }
 
 .footerLogo-container{

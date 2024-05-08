@@ -60,9 +60,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     margin: 0px 100px 20px 100px;
-    padding-top: 20px;
+    padding-top: 40px;
+    min-height: 85vh;
 }
 
 .fav-icon {
@@ -96,4 +97,15 @@
 
 .bold {
     font-weight: bold;
+}
+
+.nofavorites{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: gray;
 }

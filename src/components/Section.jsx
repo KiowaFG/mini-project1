@@ -1,32 +1,48 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import starIcon from "../assets/images/star.png";
+import heartFilledIcon from "../assets/images/filledheart_icon.png";
+import heartIcon from "../assets/images/heart_icon.png";
 import "./Section.css";
-import apartment_data from "../data/project_data.json";
-import starIcon from "../assets/images/star.png"
 
-const apartment_data_test = apartment_data.results.slice(0,19)
-
-const Section = () => {
+const Section = ({ dataArray, favArray, setFavArray }) => {
     return (
         <div className="major-container">
             {
-                apartment_data_test.map((apartment) => {
+                dataArray.map((apartment) => {
+                    // Code below needs to be refactored, hooks cannot live within loops
+                    // const [favState, setFavState] = useState(false);
+                    // const setFavStateFunction = (id) => {
+                    //     if (!favState) {
+                    //         const newFavArray = [...favArray, ...dataArray.filter(element => element.id === id)];
+                    //         setFavArray(newFavArray);
+                    //     } else {
+                    //         const newFavArray = [...favArray.filter(element => element.id !== id)];
+                    //         setFavArray(newFavArray);
+                    //     };
+                    //     setFavState(!favState);
+                    // };
+                    // Code to refacor ends here
                     return (
                         <div key={apartment.id} className="main-container">
-                            <img className="image-portfolio" src={apartment.picture_url.url} alt="test" />
-                            {/* <img src="" alt="" />  We need to add bookmark icon/image here*/}
-                            <div className="lower-container">
-                                <div className="lower2-container">
-                                    <h2>{apartment.city}, {apartment.country}</h2>
-                                    <h3>{apartment.neighbourhood}</h3>
-                                    <h3>Host: {apartment.host_name}</h3>
-                                    <h4>Max capacity: {apartment.accommodates} people</h4>
-                                    <h4>{apartment.price}€ night</h4>
+                            <img onClick={() => setFavStateFunction(apartment.id)} className="fav-icon" src= {heartIcon} alt="test" />  {/*{favState ? heartFilledIcon : heartIcon} alt="test" />  */}
+                            <Link key={apartment.id} to={`/details/${apartment.id}`}>
+                                <img className="image-portfolio" src={apartment.picture_url.url} alt="test" />
+                                <div className="lower-container">
+                                    <div className="lower2-container">
+                                        <h5>{`${apartment.property_type} in ${apartment.neighbourhood ? apartment.neighbourhood : "La Latina"}`}</h5>
+                                        <p className="card-info">{`${apartment.city}, ${apartment.country}`}</p>
+                                        <p className="card-info">Max capacity: {apartment.accommodates} people</p>
+                                        <p className="priceCard-info"><span className="bold">€{apartment.price}</span> night</p>
+                                    </div>
+                                    <div className="lower3-container">
+                                        <img className="rate-icon" src={starIcon} alt="" />
+                                        <p className="rating-info">{apartment.review_scores_rating ? apartment.review_scores_rating / 10 : `N/A`}</p>
+                                    </div>
                                 </div>
-                                <div className="lower3-container">
-                                    <img className="rate-icon" src={starIcon} alt="" />
-                                    <h4>{apartment.review_scores_rating}/100</h4>
-                                </div>
-                            </div>
+                            </Link>
                         </div>
+
                     )
                 })
             }

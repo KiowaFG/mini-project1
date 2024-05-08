@@ -42,7 +42,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footerRight-container">
-                <p className="footer-paragraph">Careers</p>
+                <p className="footer-paragraph left">Careers</p>
                 <p className="footer-paragraph left">Contact Us</p>
             </div>
         </div>
