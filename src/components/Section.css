@@ -3,6 +3,11 @@
     src: url("../assets/Montserrat-VariableFont_wght.ttf");
 }
 
+.upper-container{
+    background-color: white;
+}
+
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -15,6 +20,7 @@
     font-family: Montserrat;
     color: black;
     position: relative;
+    
 }
 
 .main-container:hover {
@@ -63,6 +69,7 @@
     gap: 40px;
     margin: 0px 100px 20px 100px;
     padding-top: 20px;
+   
 }
 
 .major-container1 {
