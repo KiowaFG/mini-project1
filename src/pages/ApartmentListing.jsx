@@ -3,7 +3,7 @@ import SearchBar from '../components/SearchBar';
 import "./ApartmentListing.css"
 import { useEffect } from "react";
 
-const ApartmentListing = ({ dataArray, setDataArray, favArray, setFavArray, inputData, setInputData, dummyTrigger }) => {
+const ApartmentListing = ({ dataArray, setDataArray, favArray, setFavArray, inputData, setInputData, allApartments }) => {
     useEffect(() => {
         window.scroll({
             top: 0,
@@ -14,7 +14,7 @@ const ApartmentListing = ({ dataArray, setDataArray, favArray, setFavArray, inpu
     
     return (
         <div className='upper-container'>
-            <SearchBar setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} />
+            <SearchBar setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} allApartments={allApartments}/>
             <Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} />
         </div>
     )

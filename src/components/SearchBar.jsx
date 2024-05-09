@@ -1,17 +1,21 @@
+import { useEffect } from "react";
 import searchBar from "../assets/images/search.png"
-import apartment_data from "../data/project_data.json";
 import "./SearchBar.css"
 
-const SearchBar = ({ setDataArray, inputData, setInputData }) => {
+const SearchBar = ({ setDataArray, inputData, setInputData, allApartments }) => {
     const updateArray = (e) => {
         setInputData(e.target.value);
     };
     const triggerSetArray = () => {
         setDataArray(
-            apartment_data.results.filter(element => element.city.toLowerCase().includes(inputData.toLowerCase()) ||
+            allApartments.filter(element => element.city.toLowerCase().includes(inputData.toLowerCase()) ||
                 element.country.toLowerCase().includes(inputData.toLowerCase()))
         )
     };
+
+    useEffect(() => {
+        triggerSetArray()
+    },[]);
     
     return (
         <div className="search-box">

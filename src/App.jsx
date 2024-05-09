@@ -13,6 +13,7 @@ import AboutUs from './components/AboutUs';
 
 function App() {
   const [dataArray, setDataArray] = useState(apartment_data.results);
+  const [allApartments, setAllApartments] = useState(apartment_data.results);
   const [favArray, setFavArray] = useState([]);
   const [inputData, setInputData] = useState("");
   const navigate = useNavigate();
@@ -28,10 +29,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage handleSubmit={handleSubmit} />} />
-        <Route path="/properties" element={<ApartmentListing dataArray={dataArray} setDataArray={setDataArray} favArray={favArray} setFavArray={setFavArray} inputData={inputData} setInputData={setInputData} />}></Route>
+        <Route path="/properties" element={<ApartmentListing allApartments={allApartments} dataArray={dataArray} setDataArray={setDataArray} favArray={favArray} setFavArray={setFavArray} inputData={inputData} setInputData={setInputData} />}></Route>
         <Route path="/favorites" element={<ApartmentFavorites favArray={favArray} setFavArray={setFavArray} />}></Route>
         <Route path="/details/:apartmentId" element={<ApartmentDetails dataArray={dataArray} />}></Route>
-        <Route path="/add_apartment" element={<AddApartmentPage dataArray={dataArray} setDataArray={setDataArray} />}></Route>
+        <Route path="/add_apartment" element={<AddApartmentPage dataArray={dataArray} setDataArray={setDataArray} allApartments={allApartments} setAllApartments={setAllApartments} />}></Route>
         <Route path='/about' element={<AboutUs/>}></Route>
       </Routes>
       <Footer />

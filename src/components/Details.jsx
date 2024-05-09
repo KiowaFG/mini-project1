@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Details.css"
 import star from "../assets/images/estrella.png"
 import yellowStar from "../assets/images/estrella-de-navidad.png"
 import diamond from "../assets/images/gemas.png"
+import "./Details.css"
 
 
 function Details({ apartmentDetail }) {
