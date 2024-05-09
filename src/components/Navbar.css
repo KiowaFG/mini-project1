@@ -20,9 +20,8 @@
     cursor: pointer;
 }
 
-
-.navbarUl{
-    flex: 1;
+ul {
+    display: flex;
     list-style: none;
     text-align: center;
 }
