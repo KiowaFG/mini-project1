@@ -1,12 +1,220 @@
-body{
-    background-color: white;
+@font-face {
+    font-family: 'Arrow';
+    src: url("../assets/arrowFont.ttf");
 }
-h1 {
+
+* {
+    font-family: Arrow;
+}
+
+body {
+    background-color: white;
+
+}
+
+
+.fullPage {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.title {
     font-size: 30px;
     color: black;
+    padding-bottom: 30px;
 }
 
-.rating{
-    font-size: 40px;
+.locationDetails {
+    display: flex;
+
 }
 
+.generalDetails {
+    display: flex;
+
+    font-size: 16px;
+    gap: 10px;
+
+
+}
+
+.generalDetails li {
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.rating {
+    font-size: 25px;
+}
+
+.ratingBox {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px rgb(188, 188, 188);
+    gap: 10px;
+    width: 500px;
+    border-radius: 30px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.starImg {
+    width: 40px;
+}
+
+.yellowStar {
+    width: 30px;
+    height: 30px;
+
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.host {
+    padding-top: 20px;
+}
+
+.diamond {
+    width: 50px;
+}
+
+.rareFind {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.checkIn {
+    padding-top: 20px;
+}
+
+.description {
+    width: 80%;
+    padding-bottom: 30px;
+}
+
+.everything {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.detailsImg {
+    width: 70%;
+}
+
+.toggleDescription {
+    cursor: pointer;
+    background-color: white;
+    padding: 10px 10px 3px 10px;
+    border: none;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 40px;
+
+}
+
+.toggleDescription {
+    background: transparent;
+    border: none;
+    display: block;
+    font-size: 20px;
+    outline: none;
+    position: relative;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+
+.toggleDescription:before {
+    content: '';
+    border-bottom: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    transition: 0.3s;
+}
+
+
+.toggleDescription:hover:before {
+    width: calc(100% - 20px);
+    padding: 0;
+}
+
+
+.toggleDescription :active {
+    background: black;
+    color: white;
+    transition: none;
+}
+
+.buttons {
+    padding-top: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+  .back{
+    cursor: pointer;
+    background-color: white;
+    padding: 10px 10px 3px 10px; 
+    border: none;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 60px;
+    background: transparent;
+    border: none;
+    display: block;
+    font-size: 20px;
+    outline: none;
+    position: relative;
+    transition: 0.3s; 
+    line-height: 1;
+  }
+
+  .back:before {
+    content: '';
+    border-bottom: 1px solid black; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0; 
+    transition: 0.3s; 
+  }
+  
+ 
+  .back:hover:before {
+    width: calc(100% - 20px); 
+    padding: 0; 
+  }
+  
+
+  .back :active {
+    background: black;
+    color: white;
+    transition: none; 
+  }
+ */

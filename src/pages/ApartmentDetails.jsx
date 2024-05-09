@@ -4,12 +4,11 @@ import { useEffect } from "react";
 import Details from "../components/Details";
 import "./ApartmentListing.css"
 
+
 const ApartmentDetails = ({dataArray}) => {
     const { apartmentId } = useParams()
-    console.log(dataArray);
     const apartmentDetail = dataArray.find(element => element.id === apartmentId)
-    console.log(apartmentDetail);
-    console.log(apartmentId);
+    
     useEffect(() => {
         window.scroll({
             top: 0,

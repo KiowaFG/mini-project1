@@ -14,7 +14,7 @@ const Navbar = () => {
                 <Link to="/properties"><li className='dropdown'>Properties</li></Link>
                 <Link to="/favorites"><li>Favorites</li></Link>
                 <Link to="add_apartment"><li>Add apartment</li></Link>
-                <li>About</li>
+                <Link to="/about"><li>About us</li></Link>
             </ul>
         </div>
     )

@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage'
 import AddApartmentPage from './pages/AddApartmentPage';
 import apartment_data from "./data/project_data.json";
 import './App.css'
+import AboutUs from './components/AboutUs';
 
 function App() {
   const [dataArray, setDataArray] = useState(apartment_data.results);
@@ -31,6 +32,7 @@ function App() {
         <Route path="/favorites" element={<ApartmentFavorites favArray={favArray} setFavArray={setFavArray} />}></Route>
         <Route path="/details/:apartmentId" element={<ApartmentDetails dataArray={dataArray} />}></Route>
         <Route path="/add_apartment" element={<AddApartmentPage dataArray={dataArray} setDataArray={setDataArray} />}></Route>
+        <Route path='/about' element={<AboutUs/>}></Route>
       </Routes>
       <Footer />
     </>
