@@ -1,22 +1,18 @@
-import "./SearchBar.css"
 import searchBar from "../assets/images/search.png"
 import apartment_data from "../data/project_data.json";
-import { useEffect } from "react";
+import "./SearchBar.css"
 
-const SearchBar = ({ setDataArray, inputData, setInputData, dummyTrigger }) => {
+const SearchBar = ({ setDataArray, inputData, setInputData }) => {
     const updateArray = (e) => {
         setInputData(e.target.value);
     };
-
     const triggerSetArray = () => {
         setDataArray(
             apartment_data.results.filter(element => element.city.toLowerCase().includes(inputData.toLowerCase()) ||
                 element.country.toLowerCase().includes(inputData.toLowerCase()))
         )
     };
-
-    useEffect(() => { triggerSetArray() }, [dummyTrigger])
-
+    
     return (
         <div className="search-box">
             <button className="btn-search"><img className="search-image" src={searchBar} alt="" /></button>

@@ -1,14 +1,22 @@
 import { useParams } from "react-router-dom";
-import apartment_data from "../data/project_data.json";
+import { useEffect } from "react";
+// import apartment_data from "../data/project_data.json";
 import Details from "../components/Details";
 import "./ApartmentListing.css"
 
 
-
-const ApartmentDetails = () => {
+const ApartmentDetails = ({dataArray}) => {
     const { apartmentId } = useParams()
-    const apartmentDetail = apartment_data.results.find(element => element.id === apartmentId)
-    console.log(apartmentDetail);
+    const apartmentDetail = dataArray.find(element => element.id === apartmentId)
+    
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        })
+    }, []);
+    
     return (
         <div className='upper-container'>
             <Details apartmentDetail={apartmentDetail} />

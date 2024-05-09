@@ -1,18 +1,21 @@
-import { useState } from 'react'
 import Section from "../components/Section";
 import SearchBar from '../components/SearchBar';
-import apartment_data from "../data/project_data.json";
 import "./ApartmentListing.css"
+import { useEffect } from "react";
 
-
-
-const ApartmentListing = ({ favArray, setFavArray, inputData, setInputData, dummyTrigger }) => {
-    const [dataArray, setDataArray] = useState(apartment_data.results);
-
+const ApartmentListing = ({ dataArray, setDataArray, favArray, setFavArray, inputData, setInputData, dummyTrigger }) => {
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        })
+    }, []);
+    
     return (
         <div className='upper-container'>
-            <SearchBar dataArray={dataArray} setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} dummyTrigger={dummyTrigger}/>
-            <Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} inputData={inputData} />
+            <SearchBar setDataArray={setDataArray} inputData={inputData} setInputData={setInputData} />
+            <Section dataArray={dataArray} favArray={favArray} setFavArray={setFavArray} />
         </div>
     )
 };
