@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Arrow';
+    src: url("../assets/arrowFont.ttf");
+}
+
+.major-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 20px;
+    margin: 0px 0px 20px 0px;
+    padding-top: 40px;
+    min-height: 85vh;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    padding: 20px 20px 0px 20px;
+
+    label {
+        font-family: Arrow;
+        font-size: 15px;
+        padding: 30px 0px 10px 0px
+    }
+
+    input {
+        height: 20px;
+        font-size: 15px;
+        font-family: Arrow;
+        border: none;
+        border-bottom: 1px solid rgb(203, 203, 203);
+        color: rgb(127, 127, 127);
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+.form-column1 {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: 0px 20px 20px 20px;
+
+    textarea {
+        height: 100px;
+        padding: 10px;
+        resize: none;
+        border: 1px solid rgb(203, 203, 203);
+        color: rgb(127, 127, 127);
+        font-family: Arrow;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+    label {
+        font-family: Arrow;
+        font-size: 15px;
+        padding: 30px 0px 10px 0px
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    button {
+        margin-top: 30px;
+        width: 10vw;
+    }
+}
+
+.form-row {
+    display: flex;
+    width: 50vw;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+::placeholder{
+    color: rgb(194, 194, 194);
+    opacity: 1;
+}
+
+/* CSS */
+.button-74 {
+  background-color: #e6e6e6;
+  border: 1px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 2px 2px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 18px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: Arrow;
+  width: 30vw;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}

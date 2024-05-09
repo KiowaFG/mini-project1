@@ -10,18 +10,10 @@ const Navbar = () => {
                 <img className='logo' src={logo} alt="logo-img" />
             </Link>
             <ul>
-                <Link to="/">
-                    <li>Home </li></Link>
-                <li className='dropdown'><Link to="/properties">Properties </Link>
-                    <div className='dropdownContent'>
-                        <a href="#">Studios</a>
-                        <a href="#">Apartments</a>
-                        <a href="#">Houses</a>
-                        <a href="#">Vilas</a>
-                    </div>
-                </li>
+                <Link to="/"><li>Home </li></Link>
+                <Link to="/properties"><li className='dropdown'>Properties</li></Link>
                 <Link to="/favorites"><li>Favorites</li></Link>
-                <li>Add apartment</li>
+                <Link to="add_apartment"><li>Add apartment</li></Link>
                 <li>About</li>
             </ul>
         </div>

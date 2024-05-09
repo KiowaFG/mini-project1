@@ -7,7 +7,7 @@ const Bookmarks = ({ favArray, setFavArray }) => {
     const setFavStateFunction = (id) => setFavArray([...favArray.filter(element => element.id !== id)]);
     if (favArray.length !== 0) {
         return (
-            <div className="major-container">
+            <div className="major-container22">
                 {
                     favArray.map((apartment) => {
                         return (
@@ -36,7 +36,7 @@ const Bookmarks = ({ favArray, setFavArray }) => {
         )
     } else {
         return (
-            <div className="major-container">
+            <div className="major-container2">
                 <div className="nofavorites">No Favorites Selected</div>
             </div>
         )

@@ -6,8 +6,6 @@ import "./Details.css"
 
 
 function Details( {apartmentDetail}) {
-console.log(apartmentDetail);
-
   return (
     <>
 
