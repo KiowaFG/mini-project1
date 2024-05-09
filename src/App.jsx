@@ -7,6 +7,7 @@ import ApartmentFavorites from './pages/ApartmentFavorites';
 import ApartmentDetails from './pages/ApartmentDetails';
 import HomePage from './components/HomePage'
 import './App.css'
+import AboutUs from './components/AboutUs';
 
 function App() {
   const [favArray, setFavArray] = useState([]);
@@ -28,6 +29,7 @@ function App() {
         <Route path="/properties" element={<ApartmentListing favArray={favArray} setFavArray={setFavArray} inputData={inputData} setInputData={setInputData} dummyTrigger={dummyTrigger} />}></Route>
         <Route path="/favorites" element={<ApartmentFavorites favArray={favArray} setFavArray={setFavArray} />}></Route>
         <Route path="/details/:apartmentId" element={<ApartmentDetails />}></Route>
+        <Route path='/about' element={<AboutUs/>}></Route>
       </Routes>
       <Footer />
     </>
