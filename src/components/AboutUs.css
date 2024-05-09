@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Arrow';
+    src: url("../assets/arrowFont.ttf");
+}
+
+*{
+
+    font-family: Arrow;
+}
+body{
+    background-color: white;
+
+}
+
+h1{
+    font-size: 40px;
+}
+
+.kaial{
+    width: 300px;
+    border-radius: 50%;
+}
+
+.fullbody{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    
+
+}

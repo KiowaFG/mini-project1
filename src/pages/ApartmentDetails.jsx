@@ -3,6 +3,8 @@ import apartment_data from "../data/project_data.json";
 import Details from "../components/Details";
 import "./ApartmentListing.css"
 
+
+
 const ApartmentDetails = () => {
     const { apartmentId } = useParams()
     const apartmentDetail = apartment_data.results.find(element => element.id === apartmentId)

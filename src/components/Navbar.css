@@ -20,13 +20,13 @@
     cursor: pointer;
 }
 
-ul{
+.navbarUl{
     flex: 1;
     list-style: none;
     text-align: center;
 }
 
-ul li{
+.navbarUl li{
     display: inline-block;
     margin: 10px 20px;
     font-size: 18px;
@@ -72,7 +72,7 @@ ul li{
     cursor: pointer;
 }
 
-ul li:hover{
+.navbarUl li:hover{
     background-color: darkgrey;
     transition: 400ms;
 }

@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link to={"/"}>
                 <img className='logo' src={logo} alt="logo-img" />
             </Link>
-            <ul>
+            <ul className='navbarUl'>
                 <Link to="/">
                     <li>Home </li></Link>
                 <li className='dropdown'><Link to="/properties">Properties </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
                 </li>
                 <Link to="/favorites"><li>Favorites</li></Link>
                 <li>Add apartment</li>
-                <li>About</li>
+                <Link to="/about"><li>About us</li></Link>
             </ul>
             <img className='toggle-icon' src={moon} alt="" />
 
