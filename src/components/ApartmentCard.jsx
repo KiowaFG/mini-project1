@@ -4,6 +4,7 @@ import starIcon from "../assets/images/star.png";
 import heartFilledIcon from "../assets/images/filledheart_icon.png";
 import heartIcon from "../assets/images/heart_icon.png";
 
+// well done by destructuring the props
 const ApartmentCard = ({ apartment, favArray, setFavArray, dataArray }) => {
   const [favState, setFavState] = useState(false);
   const setFavStateFunction = (id) => {
@@ -24,6 +25,9 @@ const ApartmentCard = ({ apartment, favArray, setFavArray, dataArray }) => {
       <img
         onClick={() => setFavStateFunction(apartment.id)}
         className="fav-icon"
+        /* 
+         Nice job on the conditional rendering of the heart icon
+        */
         src={favState ? heartFilledIcon : heartIcon}
         alt="test"
       />{" "}
@@ -35,6 +39,13 @@ const ApartmentCard = ({ apartment, favArray, setFavArray, dataArray }) => {
         />
         <div className="lower-container">
           <div className="lower2-container">
+            {/* 
+            Consider creating a function to handle the render of this h5
+            example: 
+            const renderPropertyType = (apartment) => {
+              return apartment.property_type ? apartment.property_type : "La Latina";
+            }
+             */}
             <h5>{`${apartment.property_type} in ${apartment.neighbourhood ? apartment.neighbourhood : "La Latina"}`}</h5>
             <p className="card-info">{`${apartment.city}, ${apartment.country}`}</p>
             <p className="card-info">

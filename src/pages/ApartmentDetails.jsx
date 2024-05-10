@@ -9,6 +9,7 @@ const ApartmentDetails = ({ dataArray }) => {
     (element) => element.id === apartmentId,
   );
 
+  // consider creating a function to handle the scroll that you can import in other components
   useEffect(() => {
     window.scroll({
       top: 0,

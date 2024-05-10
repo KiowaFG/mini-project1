@@ -18,7 +18,10 @@ function AboutUs() {
             sequi ullam necessitatibus perspiciatis!
           </p>
           <p>
-            {" "}
+            {/*
+              There is multiple {" "} in the code. Check the Prettier configuration to see if it can be fixed or if it is necessary
+            */}
+            {" "} 
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut,
             repellat omnis nihil at aliquid sit laborum accusantium assumenda
             temporibus corporis debitis quos mollitia architecto neque voluptas

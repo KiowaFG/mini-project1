@@ -2,7 +2,9 @@
     font-family: 'Arrow';
     src: url("../assets/arrowFont.ttf");
 }
-
+/* 
+General styles should be placed in the App.css file or in the index.css file.
+*/
 * {
     font-family: Arrow;
 }

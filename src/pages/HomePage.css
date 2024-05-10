@@ -1,3 +1,7 @@
+/* 
+By convention we are using kebab case for the class names. Consider renaming the class names to kebab case and small letters. A className with camelCase, another with PascalCase and another with kebab-case makes it less consistent.  
+*/
+
 .backgroundImage{
 background-image: url("../assets/images/madridView.webp");
 width: 100vw;

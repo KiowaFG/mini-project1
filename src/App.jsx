@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
+// When we have this amount of imports, is good to divide them in groups separated by a blank line or comments to make it more readable for other developers
+// Also, think about handling the exports in a single file so you can import them all at once
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ApartmentListing from "./pages/ApartmentListing";
@@ -17,6 +19,8 @@ function App() {
   const [favArray, setFavArray] = useState([]);
   const [inputData, setInputData] = useState("");
   const navigate = useNavigate();
+
+  // If the function is only used in one component, you can declare it inside the component
   const handleSubmit = (e) => {
     if (e.key === "Enter") {
       setInputData(e.target.value);

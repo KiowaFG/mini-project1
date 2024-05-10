@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AddApartmentPage.css";
 
+// Nice job on creating a constant for the initial state
 const initialState = {
   id: "",
   name: "",
