@@ -1,3 +1,7 @@
 body {
   width: 100vw;
 }
+
+/* 
+There is multiple css files that are modifying the body tag.
+*/
